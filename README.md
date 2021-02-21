@@ -36,4 +36,5 @@
 4) Используйте подключение к бд postgres
 
 **После запуска в docker-compose**
+
 Использовать порт 8967, обратиться по URL http://localhost:8967/api/v1/drivers?driverId=2
