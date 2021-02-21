@@ -6,6 +6,6 @@ RUN pip install -r /requirements.txt
 
 EXPOSE 5050
 
-COPY . /Homework6
+COPY . /Homework_docker
 
-CMD ["python", "Homework6/Homework6.py"]
+CMD ["python", "Homework_docker/Homework6.py"]

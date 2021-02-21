@@ -24,4 +24,4 @@ services:
     depends_on:
       - postgres
     command: >
-      python Homework6/Homework6.py
+      python Homework_docker/Homework6.py
