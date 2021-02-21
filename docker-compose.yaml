@@ -1,0 +1,27 @@
+version: "3"
+services:
+
+  postgres:
+    image: postgres:11.3
+    command: ["postgres", "-c", "log_statement=all"]
+    ports:
+      - 5444:5432
+    environment:
+      POSTGRES_DB: "users"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+
+  app:
+    build: ./
+    restart: on-failure
+    ports:
+      - 8967:5050
+    environment:
+      DB_NAME: "users"
+      DB_USER: "postgres"
+      DB_HOST: postgres
+      DB_PASSWORD: "postgres"
+    depends_on:
+      - postgres
+    command: >
+      python Homework6/Homework6.py
